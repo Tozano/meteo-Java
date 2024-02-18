@@ -14,14 +14,16 @@ public class User {
     // will be optional
     private String firstName;
     private String lastName;
+    private String lang;
 
     private List<Selection> ownSelection;
 
-    public User(Long id, String username, String firstName, String lastName, List<Selection> ownSelection){
+    public User(Long id, String username, String firstName, String lastName, String lang, List<Selection> ownSelection){
         this.id = id;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.lang = lang;
         this.ownSelection = ownSelection;
     }
 
