@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="" />
+    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
     "Spring Boot.MeteoApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/tanguy/IdeaProjects/BasketV1",
+    "last_opened_file_path": "/home/tanguy/IdeaProjects/meteo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +95,7 @@
       <workItem from="1707678325516" duration="223000" />
       <workItem from="1708274053736" duration="213000" />
       <workItem from="1708274630278" duration="20000" />
+      <workItem from="1708614225892" duration="195000" />
     </task>
     <servers />
   </component>
