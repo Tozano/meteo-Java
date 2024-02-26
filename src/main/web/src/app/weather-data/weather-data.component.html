@@ -1,8 +1,8 @@
 <div class="weatherData" *ngIf="weatherData">
   <p>
-    Météo de {{ weatherData.city }} :</p>
+    Météo de {{ weatherData.name }} :</p>
   <div class="weatherDetail">
-    <p>Température : {{ weatherData.temperature }}°C</p>
+    <p>Température : {{ weatherData.main.temp }}°C</p>
     <p>Temps: {{ weatherData.weather[0].description | lowercase }}</p>
   </div>
 </div>

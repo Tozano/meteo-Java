@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { WeatherApiData } from "../weatherApi";
+import { WeatherApiData } from "../weatherApiData";
 
 @Component({
   selector: 'app-weather-data',
