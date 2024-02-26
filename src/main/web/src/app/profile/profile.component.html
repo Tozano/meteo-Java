@@ -1,24 +1,36 @@
 <div class="profilePage">
-  <h1>Username</h1>   <button (click)="goBack()">Déconnection</button>
+  <h1>Username</h1>
+  <div class="disconnect">
+    <button mat-raised-button color="warn" (click)="goBack()">Déconnection</button>
+  </div>
 
-  <p>Nom</p>
-  <p>Prénom</p>
+  <p>{{ lastName | uppercase }} {{ firstName }}</p>
   <br>
   <br>
   <br>
   <h5>Mes lieux enregistrés :</h5>
-  <p>- Maison  --------------------------------------------------> Modifier       ...      Supprimer</p>
-  <p class="homeWeather">
-    Météo de Arras :<br>
-    Température : 11°C <br>
-    Temps: soleil<br>
-  </p>
-  <p>- Boulot  --------------------------------------------------> Modifier       ...      Supprimer</p>
-  <p class="homeWeather">
-    Météo de Lille :<br>
-    Température : 10.4°C <br>
-    Temps: soleil<br>
-  </p>
-  <p> Ajouter un lieu +</p>
+  <section *ngFor="let favorite of favorites" class="favorite">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <p>{{ favorite.surname }} </p>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-grid-list cols="12">
+        <mat-grid-tile colspan="10">
+          <app-weather-data [weatherData]="favorite.weatherData"></app-weather-data>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <button mat-raised-button color="accent">Modifier</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <button mat-fab color="warn" aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-expansion-panel>
+  </section>
+  <button mat-stroked-button> Ajouter un lieu <mat-icon>plus_one</mat-icon></button>
 </div>
 
