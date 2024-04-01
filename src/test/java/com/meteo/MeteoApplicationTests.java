@@ -7,7 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 class MeteoApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void firstTest() {
+		System.out.println("Test... test");
 	}
 
+	@Test
+	void checkUsers() {
+		System.out.println("Users");
+	}
 }

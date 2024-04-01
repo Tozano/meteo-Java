@@ -1,4 +1,4 @@
-package com.meteo;
+package com.meteo.models;
 
 import lombok.Getter;
 import lombok.Setter;

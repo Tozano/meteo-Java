@@ -1,2 +1,4 @@
 /src/main/web/node_modules/
 /target/
+/src/main/web/.angular/
+/src/main/web/.vscode/
