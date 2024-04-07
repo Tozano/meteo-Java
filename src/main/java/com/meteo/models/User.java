@@ -11,7 +11,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="User")
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,7 +51,7 @@ public class User {
 }
 
 /*
-CREATE TABLE User (
+CREATE TABLE user (
     id_user int PRIMARY KEY NOT NULL,
     username VARCHAR(255),
     first_name VARCHAR(255),

@@ -10,6 +10,6 @@ public class MeteoApplication {
 
 		ApplicationContext applicationContext = SpringApplication.run(MeteoApplication.class, args);
 		MeteoService meteoService = applicationContext.getBean(MeteoService.class);
-			meteoService.getAndShowAllUser();
+			meteoService.getAndShowAllUsersWithSelections();
 	}
 }
