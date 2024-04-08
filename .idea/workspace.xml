@@ -7,20 +7,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="💩 Starting database connection, strugling to connect">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/SelectionRepository.java" afterDir="false" />
+    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="🗃️ Confirmed database connection">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_dml.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/IMeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/IMeteoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/models/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/models/Selection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/SelectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/SelectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/meteo/MeteoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meteo/MeteoApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,7 +61,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "JUnit.MeteoApplicationIT.executor": "Run",
     "JUnit.MeteoApplicationTests.executor": "Run",
+    "JUnit.MeteoApplicationTests.findAllUsers_Test.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -87,7 +91,22 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/meteo" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MeteoApplication">
+  <component name="RunManager" selected="JUnit.MeteoApplicationIT">
+    <configuration name="MeteoApplicationIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="meteo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meteo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meteo" />
+      <option name="MAIN_CLASS_NAME" value="com.meteo.MeteoApplicationIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MeteoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="meteo" />
       <extension name="coverage">
@@ -112,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MeteoApplicationIT" />
         <item itemvalue="JUnit.MeteoApplicationTests" />
       </list>
     </recent_temporary>
@@ -159,7 +179,8 @@
       <workItem from="1710348642614" duration="242000" />
       <workItem from="1710689622178" duration="52000" />
       <workItem from="1711984077960" duration="11444000" />
-      <workItem from="1712518268093" duration="3742000" />
+      <workItem from="1712518268093" duration="4452000" />
+      <workItem from="1712559590607" duration="18468000" />
     </task>
     <task id="LOCAL-00001" summary="💩 Starting database connection, strugling to connect">
       <option name="closed" value="true" />
@@ -169,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711999462407</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="🗃️ Confirmed database connection">
+      <option name="closed" value="true" />
+      <created>1712522185839</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712522185839</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" Starting database connection, strugling to connect" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Starting database connection, strugling to connect" />
+    <MESSAGE value="️ Confirmed database connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="️ Confirmed database connection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

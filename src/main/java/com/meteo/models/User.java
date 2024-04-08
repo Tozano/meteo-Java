@@ -22,12 +22,11 @@ public class User {
 
     // will be optional
     @Column(name = "first_name")
-    private String firstName;
+    private String firstName = "";
     @Column(name = "last_name")
-    private String lastName;
+    private String lastName ="";
     @Column(name = "lang")
-    private String lang;
-
+    private String lang ="";
 
     /*
     private List<Selection> ownSelection;
@@ -40,7 +39,7 @@ public class User {
         ownSelection.remove(selection);
     }
 
-    public int getSelectionLength(){
+    public int getSelectionLength() {
         int length = 0;
         for (Selection selection : ownSelection) {
             length++;

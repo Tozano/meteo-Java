@@ -83,7 +83,8 @@ CREATE TABLE selection (
     humidity bool,
     pressure bool,
     cloud bool,
-    id_user int NOT NULL
+    id_user int NOT NULL,
+
 );
 
  */
