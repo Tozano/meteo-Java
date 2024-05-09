@@ -3,6 +3,6 @@
   <div class="spinner" *ngIf="loadingLocalisation">
     <mat-spinner></mat-spinner>
   </div>
-  <app-weather-data [weatherData]="weatherData" class="homeWeather" *ngIf="!loadingLocalisation"></app-weather-data>
+  <app-weather-data [favoritePlace]="favoritePlace" class="homeWeather" *ngIf="!loadingLocalisation"></app-weather-data>
 </div>
 

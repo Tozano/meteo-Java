@@ -1,10 +1,10 @@
 <div class="profilePage">
-  <h1>{{ username }}</h1>
+  <h1>{{ user.username }}</h1>
   <div class="disconnect">
     <button mat-raised-button color="warn" (click)="goBack()">Déconnection</button>
   </div>
 
-  <p>{{ lastName | uppercase }} {{ firstName }}</p>
+  <p>{{ user.lastName | uppercase }} {{ user.firstName }}</p>
   <br>
   <br>
   <br>
@@ -18,7 +18,7 @@
       </mat-expansion-panel-header>
       <mat-grid-list cols="12">
         <mat-grid-tile colspan="10">
-          <app-weather-data [weatherData]="favorite.weatherData"></app-weather-data>
+          <app-weather-data [favoritePlace]="favorite"></app-weather-data>
         </mat-grid-tile>
         <mat-grid-tile colspan="1">
           <button mat-raised-button color="accent">Modifier</button>

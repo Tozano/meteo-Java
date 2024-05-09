@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import { Location } from '@angular/common';
-import {WeatherApiData} from "../weatherApiData";
-import {FavoritePlaceData} from "../favorite-place-data";
-import {WeatherApiService} from "../weather-api.service";
+import {WeatherApiData} from "../models/weatherApiData";
+import {FavoritePlaceData} from "../models/favorite-place-data";
+import {WeatherApiService} from "../services/weather-api.service";
+import {MeteoService} from "../services/meteo.service";
+import {UserData} from "../models/user-data";
 
 @Component({
   selector: 'app-profile',
@@ -10,28 +12,14 @@ import {WeatherApiService} from "../weather-api.service";
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  username: string = 'Tozano';
-  firstName: string = 'Tanguy';
-  lastName: string = 'ozano';
-  favorites: FavoritePlaceData[] = [
-    {
-      surname: 'Maison',
-      pos: {
-        lat: 50.418391,
-        lon: 3.177521
-      }
-    },
-    {
-      surname: 'Ecole',
-      cityName: 'Arras'
-    },
-    {
-      surname: 'Boulot',
-      cityName: 'Lille'
-    }
-  ]
+  user: UserData = {
+    username: '',
+    firstName: '',
+    lastName: ''
+  }
+  favorites: FavoritePlaceData[] = [];
 
-  constructor(private location:Location,private weatherApiService: WeatherApiService) {
+  constructor(private location:Location,private weatherApiService: WeatherApiService, private meteoService: MeteoService) {
   }
 
   ngOnInit(): void {
@@ -42,12 +30,28 @@ export class ProfileComponent implements OnInit {
     this.location.back();
   }
 
-  getFavoritesData(){
-    for (const favorite of this.favorites) {
-      if (favorite.cityName)
-        this.weatherApiService.getWeatherDataByName(favorite.cityName, navigator.language).subscribe((datas) => {favorite.weatherData = datas});
-      if (favorite.pos)
-        this.weatherApiService.getWeatherDataByPos(favorite.pos.lat, favorite.pos.lon, navigator.language).subscribe((datas) => {favorite.weatherData = datas});
-    }
+  async getFavoritesData(){
+    this.meteoService.getUser(2).subscribe((datas) => {
+      this.user.username = datas.username;
+      this.user.firstName = datas.firstName;
+      this.user.lastName = datas.lastName;
+    });
+    this.meteoService.getSelectionsByUser(2).subscribe(async (datas) => {
+      for (const data of datas) {
+        let favoritePlace: FavoritePlaceData = {surname: data.locationSurname};
+        if (data.cityName) {
+          favoritePlace.cityName = data.cityName;
+          await this.weatherApiService.getWeatherDataByName(data.cityName, navigator.language).subscribe((openWeatherDatas) => {
+            favoritePlace.weatherData = openWeatherDatas
+          });
+        } else if (data.lon && data.lat) {
+          favoritePlace.pos = {lon: data.lon, lat: data.lat};
+          await this.weatherApiService.getWeatherDataByPos(data.lat, data.lon, navigator.language).subscribe((openWeatherDatas) => {
+            favoritePlace.weatherData = openWeatherDatas
+          });
+        }
+        this.favorites.push(favoritePlace);
+      }
+    })
   }
 }

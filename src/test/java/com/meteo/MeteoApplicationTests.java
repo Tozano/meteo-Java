@@ -4,6 +4,7 @@ import com.meteo.models.Selection;
 import com.meteo.models.User;
 import com.meteo.repositories.SelectionRepository;
 import com.meteo.repositories.UserRepository;
+import com.meteo.services.MeteoService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

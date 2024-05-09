@@ -1,9 +1,10 @@
-package com.meteo;
+package com.meteo.services;
 
 import com.meteo.models.Selection;
 import com.meteo.models.User;
 import com.meteo.repositories.SelectionRepository;
 import com.meteo.repositories.UserRepository;
+import com.meteo.services.IMeteoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,7 +51,8 @@ public class MeteoService implements IMeteoService {
     }
 
     @Override
-    public List<Selection> getAllSelectionsByUser(User user) {
+    public List<Selection> getAllSelectionsByIdUser(int idUser) {
+        User user = getUser(idUser);
         return selectionRepository.findAllByUser(user);
     }
 

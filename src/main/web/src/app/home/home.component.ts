@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { WeatherApiData } from "../weatherApiData";
-import {WeatherApiService} from "../weather-api.service";
+import { WeatherApiData } from "../models/weatherApiData";
+import {WeatherApiService} from "../services/weather-api.service";
+import {FavoritePlaceData} from "../models/favorite-place-data";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +9,7 @@ import {WeatherApiService} from "../weather-api.service";
 })
 export class HomeComponent implements OnInit {
   loadingLocalisation: boolean = true;
-  weatherData: WeatherApiData | undefined;
+  favoritePlace: FavoritePlaceData = {surname: 'ma position'};
 
 
   constructor(
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
     navigator.geolocation.getCurrentPosition(position => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      this.weatherApiService.getWeatherDataByPos(lat, lon, navigator.language).subscribe((datas) => {this.weatherData = datas})
+      this.weatherApiService.getWeatherDataByPos(lat, lon, navigator.language).subscribe((datas) => {this.favoritePlace.weatherData = datas})
       //let testAsData: WeatherApiData = test;
       this.loadingLocalisation = false;
     });

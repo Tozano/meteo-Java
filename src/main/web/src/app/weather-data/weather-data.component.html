@@ -1,8 +1,8 @@
-<div class="weatherData" *ngIf="weatherData">
+<div class="weatherData" *ngIf="favoritePlace && favoritePlace.weatherData">
   <p>
-    Météo de {{ weatherData.name }} :</p>
-  <div class="weatherDetail">
-    <p>Température : {{ weatherData.main.temp }}°C</p>
-    <p>Temps: {{ weatherData.weather[0].description | lowercase }}</p>
+    Météo de {{ favoritePlace.weatherData.name ? favoritePlace.weatherData.name : favoritePlace.surname }} :</p>
+  <div class="weatherDetail" *ngIf="favoritePlace.weatherData.weather[0] && favoritePlace.weatherData.weather[0].description">
+    <p>Température : {{ favoritePlace.weatherData.main.temp }}°C</p>
+    <p>Temps: {{ favoritePlace.weatherData.weather[0].description | lowercase }}</p>
   </div>
 </div>

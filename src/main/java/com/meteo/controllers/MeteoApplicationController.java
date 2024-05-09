@@ -1,16 +1,17 @@
-package com.meteo;
+package com.meteo.controllers;
 
+import com.meteo.services.MeteoService;
 import com.meteo.models.Selection;
 import com.meteo.models.User;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/api")
 public class MeteoApplicationController {
     @Autowired
     public MeteoService meteoService;
@@ -20,26 +21,34 @@ public class MeteoApplicationController {
         return "Hello World";
     }
 
+    /*
+    @GetMapping("/users")
     public List<User> getAllUsers() {
         return meteoService.getAllUsers();
     }
+     */
 
-    public List<Selection> getAllSelectionsByUser(User user) {
-        return meteoService.getAllSelectionsByUser(user);
+    @GetMapping("/selections/getByIdUser/{idUser}")
+    public List<Selection> getAllSelectionsByUser(@PathVariable int idUser) {
+        return meteoService.getAllSelectionsByIdUser(idUser);
     }
 
-    public User getUserById(int idUser) {
+    @GetMapping("/users/{idUser}")
+    public User getUserById(@PathVariable int idUser) {
         return meteoService.getUser(idUser);
     }
 
+    @PostMapping("/users")
     public User insertUser(User user) {
         return meteoService.insertUser(user);
     }
 
-    public Selection getSelectionById(int idSelection) {
+    @GetMapping("/selections/{idSelection}")
+    public Selection getSelectionById(@PathVariable int idSelection) {
         return meteoService.getSelection(idSelection);
     }
 
+    @PostMapping("/selections")
     public Selection insertSelection(Selection selection) {
         return meteoService.insertSelection(selection);
     }

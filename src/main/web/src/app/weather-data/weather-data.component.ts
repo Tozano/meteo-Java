@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { WeatherApiData } from "../weatherApiData";
+import {FavoritePlaceData} from "../models/favorite-place-data";
 
 @Component({
   selector: 'app-weather-data',
@@ -7,5 +7,5 @@ import { WeatherApiData } from "../weatherApiData";
   styleUrls: ['./weather-data.component.scss']
 })
 export class WeatherDataComponent {
-  @Input() weatherData?:WeatherApiData;
+  @Input() favoritePlace?:FavoritePlaceData;
 }

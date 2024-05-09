@@ -1,4 +1,4 @@
-package com.meteo;
+package com.meteo.services;
 
 import com.meteo.models.Selection;
 import com.meteo.models.User;
@@ -14,7 +14,7 @@ public interface IMeteoService {
 
     Selection getSelection(int idSelection);
 
-    List<Selection> getAllSelectionsByUser(User user);
+    List<Selection> getAllSelectionsByIdUser(int idUser);
 
     User insertUser(User user);
 

@@ -2,7 +2,6 @@ DROP TABLE IF EXISTS selection;
 
 DROP TABLE IF EXISTS user;
 
-
 CREATE TABLE user (
     id_user int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     username VARCHAR(255),

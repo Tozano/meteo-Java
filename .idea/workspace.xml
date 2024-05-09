@@ -7,22 +7,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="🗃️ Confirmed database connection">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_ddl.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_dml.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" afterDir="false" />
+    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="✅ Added testing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/web/src/app/models/user-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/web/src/app/services/meteo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationFT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/IMeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/IMeteoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/models/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/models/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/SelectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/SelectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/IMeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/IMeteoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/MeteoApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/MeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/MeteoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/controller/meteo_ddl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/favorite-place-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/models/favorite-place-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/weather-api.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/services/weather-api.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/weather-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/services/weather-api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/weather-data/weather-data.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/weather-data/weather-data.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/weather-data/weather-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/weather-data/weather-data.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/weatherApiData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/models/weatherApiData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meteo/MeteoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meteo/MeteoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,45 +68,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "JUnit.MeteoApplicationIT.executor": "Run",
-    "JUnit.MeteoApplicationTests.executor": "Run",
-    "JUnit.MeteoApplicationTests.findAllUsers_Test.executor": "Debug",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.MeteoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/home/tanguy/IdeaProjects/meteo/src/main/java/com/meteo",
-    "last_opened_file_path": "/home/tanguy/IdeaProjects/meteo/src/main/java/com/meteo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "ts.external.directory.path": "/home/tanguy/IdeaProjects/meteo/src/main/web/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Application.MeteoApplicationFT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MeteoApplicationIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MeteoApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MeteoApplicationTests.findAllUsers_Test.executor&quot;: &quot;Debug&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MeteoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/tanguy/IdeaProjects/meteo/src/main/java/com/meteo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tanguy/IdeaProjects/meteo/src/main/web/src/app/services&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/tanguy/IdeaProjects/meteo/src/main/web/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/web/src/app/services" />
       <recent name="$PROJECT_DIR$/src/main/java/com/meteo" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/web/src/app/models" />
+      <recent name="$PROJECT_DIR$/src/main/web/src/app/services" />
+      <recent name="$PROJECT_DIR$/src/main/web/src/app" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.MeteoApplicationIT">
+  <component name="RunManager" selected="Spring Boot.MeteoApplication">
     <configuration name="MeteoApplicationIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="meteo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.meteo.*" />
+          <option name="PATTERN" value="com.meteo.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,7 +128,7 @@
       <module name="meteo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.meteo.*" />
+          <option name="PATTERN" value="com.meteo.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,7 +197,9 @@
       <workItem from="1710689622178" duration="52000" />
       <workItem from="1711984077960" duration="11444000" />
       <workItem from="1712518268093" duration="4452000" />
-      <workItem from="1712559590607" duration="18468000" />
+      <workItem from="1712559590607" duration="21901000" />
+      <workItem from="1714724486582" duration="14459000" />
+      <workItem from="1715266730659" duration="4203000" />
     </task>
     <task id="LOCAL-00001" summary="💩 Starting database connection, strugling to connect">
       <option name="closed" value="true" />
@@ -198,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712522185839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="✅ Added testing">
+      <option name="closed" value="true" />
+      <created>1712582114664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712582114664</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +234,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" Starting database connection, strugling to connect" />
     <MESSAGE value="️ Confirmed database connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="️ Confirmed database connection" />
+    <MESSAGE value="✅ Added testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="✅ Added testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

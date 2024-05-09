@@ -1,5 +1,6 @@
 package com.meteo;
 
+import com.meteo.controllers.MeteoApplicationController;
 import com.meteo.models.Selection;
 import com.meteo.models.User;
 import org.junit.jupiter.api.Test;
@@ -95,7 +96,6 @@ public class MeteoApplicationIT {
         if (selectionList.size() == result.size()) {
             for (int i = 0; i < selectionList.size(); i++) {
                 assertEquals(selectionList.get(i).getId(), result.get(i).getId());
-                System.out.println(result.get(i).getId());
             }
         }
     }
