@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 @SpringBootTest
 public class MeteoApplicationFT {
     /**
@@ -22,44 +25,38 @@ public class MeteoApplicationFT {
 // maximize the browser window
         driver.manage().window().maximize();
 
+        WebElement connectionButton = driver.findElement(By.id("connectionButton"));
+        connectionButton.click();
+
         // click on the Sign in button
-        WebElement SignInButton = driver.findElement(By.id("profileButton"));
-        SignInButton.click();
-
-        /*
-// declare and initialize the variable to store the expected title of the webpage.
-        String expectedTitle = "Sign in - Google Accounts";
-
-// fetch the title of the web page and save it into a string variable
-        String actualTitle = driver.getTitle();
-
-// compare the expected title of the page with the actual title of the page and print the result
-        if (expectedTitle.equals(actualTitle))
-        {
-            System.out.println("Verification Successful - The correct title is displayed on the web page.");
-        }
-        else
-        {
-            System.out.println("Verification Failed - An incorrect title is displayed on the web page.");
-        }
-
-// enter a valid username in the email textbox
-        WebElement username = driver.findElement(By.id("identifierId"));
+        WebElement username = driver.findElement(By.id("username"));
         username.clear();
-        username.sendKeys("TestSelenium");
+        username.sendKeys("Tozano");
 
-        /*
-// enter a valid password in the password textbox
-        WebElement password = driver.findElement(By.id("Passwd"));
-        password.clear();
-        password.sendKeys("password123");
-*/
+        WebElement profileButton = driver.findElement(By.id("profileButton"));
+        profileButton.click();
 
-// close the web browser
+        WebElement addButton = driver.findElement(By.id("addButton"));
+        addButton.click();
+
+        WebElement surname = driver.findElement(By.id("surname"));
+        surname.clear();
+        surname.sendKeys("Test");
+
+        WebElement cityName = driver.findElement(By.id("cityName"));
+        cityName.clear();
+        cityName.sendKeys("Paris");
+
+        WebElement createPlaceButton = driver.findElement(By.id("createPlaceButton"));
+        createPlaceButton.click();
+
+        WebElement test = driver.findElement(By.id("Test"));
+
+        // close the web browser
         driver.close();
         System.out.println("Test script executed successfully.");
 
-// terminate the program
+        // terminate the program
         System.exit(0);
     }
 }

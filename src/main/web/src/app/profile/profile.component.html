@@ -1,7 +1,7 @@
 <div class="profilePage">
   <h1>{{ user.username }}</h1>
   <div class="disconnect">
-    <button mat-raised-button color="warn" (click)="goBack()">Déconnection</button>
+    <button mat-raised-button color="warn" (click)="goBack()">Deconnection</button>
   </div>
 
   <p>{{ user.lastName | uppercase }} {{ user.firstName }}</p>
@@ -9,7 +9,7 @@
   <br>
   <br>
   <h5>Mes lieux enregistrés :</h5>
-  <section *ngFor="let favorite of favorites" class="favorite">
+  <section id="{{ favorite.surname }}" *ngFor="let favorite of favorites" class="favorite">
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -21,16 +21,13 @@
           <app-weather-data [favoritePlace]="favorite"></app-weather-data>
         </mat-grid-tile>
         <mat-grid-tile colspan="1">
-          <button mat-raised-button color="accent">Modifier</button>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="1">
-          <button mat-fab color="warn" aria-label="Example icon button with a delete icon">
+          <button mat-fab color="warn" id="deleteButton" (click)="deletePlace(favorite)" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
           </button>
         </mat-grid-tile>
       </mat-grid-list>
     </mat-expansion-panel>
   </section>
-  <button mat-stroked-button> Ajouter un lieu <mat-icon>plus_one</mat-icon></button>
+  <button id="addButton" (click)="addPlace()" mat-stroked-button> Ajouter un lieu <mat-icon>plus_one</mat-icon></button>
 </div>
 

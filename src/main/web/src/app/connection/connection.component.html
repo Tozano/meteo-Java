@@ -1,1 +1,13 @@
-<p>connection works!</p>
+<div class="connection">
+  <form (ngSubmit)="onSubmit()">
+    <label for="username">Identifiant :</label>
+    <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+    <button id="profileButton" type="submit">Se connecter</button>
+  </form>
+  <div id="wrongUsername" *ngIf="isWrongUsername">Mauvais identifiant</div>
+</div>
+<button mat-flat-button id="createUserButton" class="createUserButton" routerLink="../create-user">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="plus"></mat-icon>
+  S'inscrire
+</button>
+

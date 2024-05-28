@@ -13,11 +13,17 @@ export class WeatherApiService {
   constructor(private httpClient: HttpClient) { }
 
   getWeatherDataByName(cityName:string, langage:string): Observable<WeatherApiData> {
+    if (!(langage == "fr" || langage == "eng")) {
+      langage = "fr"
+    }
     let API_URL = "http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&lang=" + langage + "&units=metric&APPID=" + this.API_KEY;
     return this.httpClient.get<WeatherApiData>(API_URL)
   }
 
   getWeatherDataByPos(lat:number, lon:number, langage:string): Observable<WeatherApiData> {
+    if (!(langage == "fr" || langage == "eng")) {
+      langage = "fr"
+    }
     let API_URL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&lang=" + langage + "&units=metric&APPID=" + this.API_KEY;
     return this.httpClient.get<WeatherApiData>(API_URL)
   }

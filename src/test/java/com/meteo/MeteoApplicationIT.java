@@ -37,7 +37,7 @@ public class MeteoApplicationIT {
         User user = meteoApplicationController.getAllUsers().get(0);
 
         // WHEN
-        List<Selection> result = meteoApplicationController.getAllSelectionsByUser(user);
+        List<Selection> result = meteoApplicationController.getAllSelectionsByUser(Math.toIntExact(user.getId()));
 
         // THEN
         assertNotNull(result);
@@ -78,7 +78,7 @@ public class MeteoApplicationIT {
     void testFindAllSelectionsByUser_OK() {
         User user = meteoApplicationController.getAllUsers().get(0);
 
-        List<Selection> selectionList = meteoApplicationController.getAllSelectionsByUser(user);
+        List<Selection> selectionList = meteoApplicationController.getAllSelectionsByUser(Math.toIntExact(user.getId()));
 
         Selection selection = new Selection();
         selection.setLocationSurname("Test FindAll");
@@ -88,7 +88,7 @@ public class MeteoApplicationIT {
         selectionList.add(newSelection);
 
         // WHEN
-        List<Selection> result = meteoApplicationController.getAllSelectionsByUser(user);
+        List<Selection> result = meteoApplicationController.getAllSelectionsByUser(Math.toIntExact(user.getId()));
 
         // THEN
         assertNotNull(result);
@@ -104,7 +104,7 @@ public class MeteoApplicationIT {
     void testUpdateUser_OK() {
         User user = meteoApplicationController.getAllUsers().get(0);
 
-        user.setLang("Eng");
+        user.setLang("eng");
 
         User newUser = meteoApplicationController.insertUser(user);
 
@@ -113,7 +113,7 @@ public class MeteoApplicationIT {
 
         // THEN
         assertNotNull(result);
-        assertEquals("Eng", result.getLang());
+        assertEquals("eng", result.getLang());
     }
 
     @Test
@@ -134,6 +134,27 @@ public class MeteoApplicationIT {
         // THEN
         assertNotNull(result);
         assertEquals(newUser.getId(), result.getUser().getId());
+    }
+
+    @Test
+    void testDeleteSelection_OK(){
+        User user = meteoApplicationController.getAllUsers().get(0);
+
+        Selection selection = new Selection();
+        selection.setLocationSurname("Test Insert");
+        selection.setUser(user);
+
+        Selection newSelection = meteoApplicationController.insertSelection(selection);
+        List<Selection> selectionList = meteoApplicationController.getAllSelectionsByUser(Math.toIntExact(user.getId()));
+        meteoApplicationController.deleteSelection(Math.toIntExact(newSelection.getId()));
+        // WHEN
+        List<Selection> result = meteoApplicationController.getAllSelectionsByUser(Math.toIntExact(user.getId()));
+
+
+        // THEN
+        assertNotNull(selectionList);
+        assertNotNull(result);
+        assertEquals(selectionList.size() - 1, result.size());
     }
 
 }

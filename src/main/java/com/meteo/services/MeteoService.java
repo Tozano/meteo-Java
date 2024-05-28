@@ -4,7 +4,6 @@ import com.meteo.models.Selection;
 import com.meteo.models.User;
 import com.meteo.repositories.SelectionRepository;
 import com.meteo.repositories.UserRepository;
-import com.meteo.services.IMeteoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +43,12 @@ public class MeteoService implements IMeteoService {
         return response.orElseGet(User::new);
     }
 
+
+    @Override
+    public User getUserByUsername(String username) {
+        return userRepository.findOneByUsername(username);
+    }
+
     @Override
     public Selection getSelection(int idSelection) {
         Optional<Selection> response = selectionRepository.findById(idSelection);
@@ -64,5 +69,17 @@ public class MeteoService implements IMeteoService {
     @Override
     public Selection insertSelection(Selection selection) {
         return selectionRepository.save(selection);
+    }
+
+    @Override
+    public void updateSelection(Selection selection) {
+        Selection selectionInDatabase = this.getSelection(Math.toIntExact(selection.getId()));
+        selectionInDatabase = selection;
+        selectionRepository.save(selectionInDatabase);
+    }
+
+    @Override
+    public void deleteSelection(int idSelection) {
+        selectionRepository.deleteById(idSelection);
     }
 }

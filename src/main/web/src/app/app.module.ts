@@ -16,6 +16,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { WeatherDataComponent } from './weather-data/weather-data.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {FormsModule} from "@angular/forms";
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreatePlaceComponent } from './create-place/create-place.component';
+import { UpdatePlaceComponent } from './update-place/update-place.component';
 
 @NgModule({
   declarations: [
@@ -25,19 +29,23 @@ import {MatGridListModule} from "@angular/material/grid-list";
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    WeatherDataComponent
+    WeatherDataComponent,
+    CreateUserComponent,
+    CreatePlaceComponent,
+    UpdatePlaceComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatProgressSpinnerModule,
-    MatButtonModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatGridListModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatProgressSpinnerModule,
+        MatButtonModule,
+        MatIconModule,
+        MatExpansionModule,
+        MatGridListModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

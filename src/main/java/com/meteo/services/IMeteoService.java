@@ -12,6 +12,8 @@ public interface IMeteoService {
 
     User getUser(int idUser);
 
+    User getUserByUsername(String username);
+
     Selection getSelection(int idSelection);
 
     List<Selection> getAllSelectionsByIdUser(int idUser);
@@ -19,4 +21,8 @@ public interface IMeteoService {
     User insertUser(User user);
 
     Selection insertSelection(Selection selection);
+
+    void updateSelection(Selection selection);
+
+    void deleteSelection(int idSelection);
 }
