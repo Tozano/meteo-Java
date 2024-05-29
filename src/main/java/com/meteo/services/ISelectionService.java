@@ -5,20 +5,12 @@ import com.meteo.models.User;
 
 import java.util.List;
 
-public interface IMeteoService {
+public interface ISelectionService {
     void getAndShowAllUsersWithSelections();
-
-    List<User> getAllUsers();
-
-    User getUser(int idUser);
-
-    User getUserByUsername(String username);
 
     Selection getSelection(int idSelection);
 
     List<Selection> getAllSelectionsByIdUser(int idUser);
-
-    User insertUser(User user);
 
     Selection insertSelection(Selection selection);
 

@@ -4,7 +4,8 @@ import com.meteo.models.Selection;
 import com.meteo.models.User;
 import com.meteo.repositories.SelectionRepository;
 import com.meteo.repositories.UserRepository;
-import com.meteo.services.MeteoService;
+import com.meteo.services.SelectionService;
+import com.meteo.services.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,9 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class MeteoApplicationTests {
 	@InjectMocks
-	public MeteoService meteoService; // pour injecter mocks en dessous
+	public UserService userService; // pour injecter mocks en dessous
+	@InjectMocks
+	public SelectionService selectionService;
 	@Mock
 	public UserRepository userRepository;
 	@Mock
@@ -31,7 +34,8 @@ class MeteoApplicationTests {
 
 	@BeforeEach
 	void setup() {
-		meteoService = new MeteoService(userRepository, selectionRepository);
+		userService = new UserService(userRepository);
+		selectionService = new SelectionService(userService, selectionRepository);
 	}
 
 	@Test
@@ -42,7 +46,7 @@ class MeteoApplicationTests {
 		Mockito.when(userRepository.findAll()).thenReturn(userList); // quand on fait appelle à la fonction, on retourne cette valeur
 
 		//WHEN -> ligne
-		List<User> result = meteoService.getAllUsers();
+		List<User> result = userService.getAllUsers();
 
 		//THEN -> vérif
 		Assertions.assertNotNull(result);
@@ -58,7 +62,7 @@ class MeteoApplicationTests {
 		Mockito.when(userRepository.findById(anyInt())).thenReturn(Optional.of(user)); // quand on fait appelle à la fonction, on retourne cette valeur
 
 		//WHEN -> ligne
-		User result = meteoService.getUser(anyInt());
+		User result = userService.getUser(anyInt());
 
 		//THEN -> vérif
 		Assertions.assertNotNull(result);
@@ -116,7 +120,7 @@ class MeteoApplicationTests {
 		//doNothing().when(meteoService).getAndShowAllUsersWithSelections();
 
 		//WHEN
-		meteoService.getAndShowAllUsersWithSelections();
+		selectionService.getAndShowAllUsersWithSelections();
 
 		//THEN
 		verify(userRepository).findAll();

@@ -7,12 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="🗃️ Created basic controller : get requests used by the front">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/UserController.java" afterDir="false" />
+    <list default="true" id="e1631ac1-518a-4c25-ba1a-be6c73d77f12" name="Changes" comment="🚚 Split MeteoApplicationController.java into entities controllers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/ISelectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/SelectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/MeteoApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SelectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/SelectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/services/IMeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/services/MeteoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/MeteoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +93,11 @@
       <recent name="$PROJECT_DIR$/src/main/web/src/app/services" />
       <recent name="$PROJECT_DIR$/src/main/web/src/app" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.meteo.services" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MeteoApplication">
+  <component name="RunManager" selected="JUnit.MeteoApplicationTests">
     <configuration name="MeteoApplicationIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="meteo" />
       <extension name="coverage">
@@ -167,8 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MeteoApplicationIT" />
         <item itemvalue="JUnit.MeteoApplicationTests" />
+        <item itemvalue="JUnit.MeteoApplicationIT" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715271149758</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="🚚 Split MeteoApplicationController.java into entities controllers">
+      <option name="closed" value="true" />
+      <created>1716975612258</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716975612259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +285,8 @@
     <MESSAGE value="️ Confirmed database connection" />
     <MESSAGE value="✅ Added testing" />
     <MESSAGE value="️ Created basic controller : get requests used by the front" />
-    <option name="LAST_COMMIT_MESSAGE" value="️ Created basic controller : get requests used by the front" />
+    <MESSAGE value=" Split MeteoApplicationController.java into entities controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Split MeteoApplicationController.java into entities controllers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
